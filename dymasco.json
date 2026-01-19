@@ -1,0 +1,26 @@
+{
+  "id": "exp-dymasco",
+  "title": "Développeur Logiciel MES/MOM",
+  "company": "DYMASCO",
+  "period": "Octobre 2023 - Août 2025",
+  "color": "success",
+  "tasks": [
+    "Développement, configuration et déploiement du logiciel via la plateforme Apriso.",
+    "Interfaçage complexe : connexion des équipements terrain (IoT, automates) via Machine Integrator et Kepware. Synchronisation avec l'écosystème client (ERP, LIMS, WMS) par API REST et flux XML.",
+    "Garant de la conformité des solutions développées par la rédaction et l’exécution de tests sous Jira.",
+    "Rédaction des documentations techniques et utilisateurs.",
+    "Optimisation des processus métiers : implémentation de solutions dédiées aux flux Logistiques, au contrôle Qualité, au suivi des Ordres de Production et acquisition des données.",
+    "Maintien en Condition Opérationnelle (MCO) : Support technique de niveau 2/3 et résolution d'incidents critiques en temps réel sur les systèmes en production."
+  ],
+  "badges": [
+    {"name": "Apriso", "style": "success"},
+    {"name": "SQL", "style": "success"},
+    {"name": "JavaScript", "style": "secondary"},
+    {"name": "C#", "style": "secondary"},
+    {"name": "HTML", "style": "secondary"},
+    {"name": "CSS", "style": "dark"},
+    {"name": "SQL Server", "style": "dark"},
+    {"name": "C3.js", "style": "dark"},
+    {"name": "Jira", "style": "dark"}
+  ]
+}

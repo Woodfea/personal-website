@@ -1,0 +1,39 @@
+{
+    "formations": [
+        {
+            "title": "Master 2 mention Informatique parcours Intelligence Artificielle (IA)",
+            "school": "Université Claude Bernard Lyon 1",
+            "period": "Septembre 2022 - Septembre 2023",
+            "color": "success",
+            "description": "",
+            "badges": [
+                {"name": "Python", "style": "primary"},
+                {"name": "PyTorch", "style": "primary"},
+                 {"name": "Java", "style": "primary"},
+                {"name": "Numpy", "style": "secondary"},
+                {"name": "Jupyter", "style": "secondary"},
+                {"name": "Scikit-learn", "style": "secondary"},
+                {"name": "Pandas", "style": "secondary"},
+                {"name": "Matplotlib", "style": "secondary"}
+            ]
+        },
+        {
+            "title": "Master 1 mention informatique",
+            "school": "Université Claude Bernard Lyon 1",
+            "period": "Septembre 2021 - Septembre 2022",
+            "color": "success",
+            "badges": [
+                {"name": "C++", "style": "primary"},
+                {"name": "Java", "style": "primary"},
+                {"name": "Git", "style": "primary"},
+                {"name": "JavaScript", "style": "secondary"},
+                {"name": "C#", "style": "secondary"},
+                {"name": "HTML", "style": "dark"},
+                {"name": "Vue.js", "style": "dark"},
+                {"name": "Spring Boot", "style": "dark"},
+                {"name": "CSS", "style": "dark"},
+                {"name": "Unity", "style": "dark"}
+            ]
+        }
+    ]
+}
