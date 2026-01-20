@@ -15,12 +15,12 @@
   "badges": [
     {"name": "Apriso", "style": "success"},
     {"name": "SQL", "style": "success"},
-    {"name": "JavaScript", "style": "secondary"},
-    {"name": "C#", "style": "secondary"},
-    {"name": "HTML", "style": "secondary"},
-    {"name": "CSS", "style": "dark"},
-    {"name": "SQL Server", "style": "dark"},
-    {"name": "C3.js", "style": "dark"},
-    {"name": "Jira", "style": "dark"}
+    {"name": "JavaScript", "style": "dark"},
+    {"name": "C#", "style": "dark"},
+    {"name": "HTML", "style": "dark"},
+    {"name": "CSS", "style": "secondary"},
+    {"name": "SQL Server", "style": "secondary"},
+    {"name": "C3.js", "style": "secondary"},
+    {"name": "Jira", "style": "secondary"}
   ]
 }

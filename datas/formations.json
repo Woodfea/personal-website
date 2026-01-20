@@ -8,8 +8,8 @@
             "description": "",
             "badges": [
                 {"name": "Python", "style": "primary"},
-                {"name": "PyTorch", "style": "primary"},
                  {"name": "Java", "style": "primary"},
+                 {"name": "PyTorch", "style": "secondary"},
                 {"name": "Numpy", "style": "secondary"},
                 {"name": "Jupyter", "style": "secondary"},
                 {"name": "Scikit-learn", "style": "secondary"},
@@ -26,13 +26,13 @@
                 {"name": "C++", "style": "primary"},
                 {"name": "Java", "style": "primary"},
                 {"name": "Git", "style": "primary"},
-                {"name": "JavaScript", "style": "secondary"},
-                {"name": "C#", "style": "secondary"},
-                {"name": "HTML", "style": "dark"},
-                {"name": "Vue.js", "style": "dark"},
-                {"name": "Spring Boot", "style": "dark"},
-                {"name": "CSS", "style": "dark"},
-                {"name": "Unity", "style": "dark"}
+                {"name": "JavaScript", "style": "dark"},
+                {"name": "C#", "style": "dark"},
+                {"name": "HTML", "style": "secondary"},
+                {"name": "Vue.js", "style": "secondary"},
+                {"name": "Spring Boot", "style": "secondary"},
+                {"name": "CSS", "style": "secondary"},
+                {"name": "Unity", "style": "secondary"}
             ]
         }
     ]

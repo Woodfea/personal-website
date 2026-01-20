@@ -16,10 +16,10 @@
     {"name": "PyTorch", "style": "success"},
     {"name": "Streamlit", "style": "success"},
      {"name": "Jupyter", "style": "success"},
-    {"name": "Git", "style": "secondary"},
-    {"name": "Numpy", "style": "secondary"},
-    {"name": "Scikit-learn", "style": "secondary"},
-    {"name": "HTML", "style": "dark"},
-    {"name": "CSS", "style": "dark"}
+    {"name": "Git", "style": "dark"},
+    {"name": "Numpy", "style": "dark"},
+    {"name": "Scikit-learn", "style": "dark"},
+    {"name": "HTML", "style": "secondary"},
+    {"name": "CSS", "style": "secondary"}
   ]
 }
