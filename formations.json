@@ -3,7 +3,7 @@
         {
             "title": "Master 2 mention Informatique parcours Intelligence Artificielle (IA)",
             "school": "Université Claude Bernard Lyon 1",
-            "period": "Septembre 2022 - Septembre 2023",
+            "period": "2022 - 2023",
             "color": "success",
             "description": "",
             "badges": [
@@ -20,7 +20,7 @@
         {
             "title": "Master 1 mention informatique",
             "school": "Université Claude Bernard Lyon 1",
-            "period": "Septembre 2021 - Septembre 2022",
+            "period": "2021 - 2022",
             "color": "success",
             "badges": [
                 {"name": "C++", "style": "primary"},
