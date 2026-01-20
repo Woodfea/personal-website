@@ -1,5 +1,5 @@
-import { experienceTemplate } from './experienceTemplate.js';
-import { formationTemplate } from './formationTemplate.js';
+import { experienceTemplate } from './templates/experienceTemplate.js';
+import { formationTemplate } from './templates/formationTemplate.js';
 
 // On compile une seule fois au début
 const templates = {
@@ -33,7 +33,7 @@ function updateBubbles(activeElement) {
 }
 
 // 1. Charger les formations tout de suite
-renderTemplate('formations.json', "formation-container", 'formation');
+renderTemplate('./datas/formations.json', "formation-container", 'formation');
 
 // 2. Écouteur de clic "intelligent" (Délégation d'événement)
 // On écoute les clics sur un parent commun ou sur chaque div d'expérience
