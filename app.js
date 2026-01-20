@@ -20,12 +20,12 @@ async function renderTemplate(jsonfile, containerId, templateType) {
 }
 
 function updateBubbles(activeElement) {
-    document.querySelectorAll('[class^="timeline-bubble-"').forEach(b => {
+    document.querySelectorAll('.timeline-bubble').forEach(b => {
         b.classList.remove('active');
         b.classList.add('text-secondary');
     });
 
-    const bubble = activeElement.querySelector('[class^="timeline-bubble-"');
+    const bubble = activeElement.querySelector('.timeline-bubble');
     if (bubble) {
         bubble.classList.add('active');
         bubble.classList.remove('text-secondary');

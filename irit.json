@@ -3,7 +3,7 @@
   "title": "Stage R&D - IA Distribuée & Confidentialité",
   "company": "Laboratoire IRIT (Institut de Recherche en Informatique de Toulouse)",
   "period": "Mars 2023 - Août 2023",
-  "color": "primary",
+  "color": "success",
   "tasks": [
     "Développement et optimisation d'architectures de Deep Learning (ex: LSTM ou GNN) pour la prédiction de séries temporelles de mobilité urbaine sous PyTorch.",
     "Conception d'une architecture d'Apprentissage Fédéré (Federated Learning) permettant l'entraînement de modèles sur données distribuées sans compromis sur la confidentialité (RGPD).",
@@ -12,10 +12,10 @@
     "Veille scientifique sur les avancées du Deep Learning appliqué aux contraintes de mobilité."
   ],
   "badges": [
-    {"name": "Python", "style": "primary"},
-    {"name": "PyTorch", "style": "primary"},
-    {"name": "Streamlit", "style": "primary"},
-     {"name": "Jupyter", "style": "primary"},
+    {"name": "Python", "style": "success"},
+    {"name": "PyTorch", "style": "success"},
+    {"name": "Streamlit", "style": "success"},
+     {"name": "Jupyter", "style": "success"},
     {"name": "Git", "style": "secondary"},
     {"name": "Numpy", "style": "secondary"},
     {"name": "Scikit-learn", "style": "secondary"},
