@@ -34,6 +34,22 @@
                 {"name": "CSS", "style": "secondary"},
                 {"name": "Unity", "style": "secondary"}
             ]
+        },
+         {
+            "title": "Licence mention informatique",
+            "school": "Université Claude Bernard Lyon 1",
+            "period": "2018 - 2021",
+            "color": "success",
+            "badges": [
+                {"name": "C++", "style": "primary"},
+                {"name": "Java", "style": "primary"},
+                {"name": "Git", "style": "primary"},
+                {"name": "JavaScript", "style": "dark"},
+                {"name": "PHP", "style": "dark"},
+                {"name": "HTML", "style": "secondary"},
+                {"name": "Prolog", "style": "secondary"},
+                {"name": "CSS", "style": "secondary"}
+            ]
         }
     ]
 }
