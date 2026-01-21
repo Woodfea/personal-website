@@ -1,0 +1,20 @@
+{
+    "experiences": [
+        {
+            "id": "irit",
+            "jsonDataset": "./datas/irit.json",
+            "number": 1,
+            "year": "2023",
+            "contractType": "Stage",
+            "company": "IRIT"
+        },
+        {
+            "id": "dymasco",
+            "jsonDataset": "./datas/dymasco.json",
+            "number": 2,
+            "year": "2023 - 2025",
+            "contractType": "CDI",
+            "company": "Dymasco"
+        }
+    ] 
+}

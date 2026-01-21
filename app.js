@@ -1,50 +1,71 @@
 import { experienceTemplate } from './templates/experienceTemplate.js';
 import { formationTemplate } from './templates/formationTemplate.js';
+import { bubbleTimelineTemplate } from './templates/bubbleTimelineTemplate.js';
 
 // On compile une seule fois au début
 const templates = {
     experience: Handlebars.compile(experienceTemplate),
-    formation: Handlebars.compile(formationTemplate)
+    formation: Handlebars.compile(formationTemplate),
+    bubble: Handlebars.compile(bubbleTimelineTemplate)
 };
 
-// Fonction simple pour charger du JSON
 async function fetchJson(file) {
-    const response = await fetch(file);
-    return await response.json();
-}
-
-async function renderTemplate(jsonfile, containerId, templateType) {
-    const data = await fetchJson(jsonfile);
-    const html = templates[templateType](data);
-    document.getElementById(containerId).innerHTML = html;
-}
-
-function updateBubbles(activeElement) {
-    document.querySelectorAll('.timeline-bubble').forEach(b => {
-        b.classList.remove('active');
-        b.classList.add('text-secondary');
-    });
-
-    const bubble = activeElement.querySelector('.timeline-bubble');
-    if (bubble) {
-        bubble.classList.add('active');
-        bubble.classList.remove('text-secondary');
+    try {
+        const response = await fetch(file);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return await response.json();
+    } catch (error) {
+        console.error("Loading error " + file, error);
+        return null;
     }
 }
 
-// 1. Charger les formations tout de suite
-renderTemplate('./datas/formations.json', "formation-container", 'formation');
+async function renderTemplate(jsonfile, containerHTMLId, templateType) {
+    const data = await fetchJson(jsonfile);
+    if (!data) return;
+    const html = templates[templateType](data);
+    document.getElementById(containerHTMLId).innerHTML = html;
+}
 
-// 2. Écouteur de clic "intelligent" (Délégation d'événement)
-// On écoute les clics sur un parent commun ou sur chaque div d'expérience
-document.querySelectorAll('[id^="MPD-div-exp-"]').forEach(element => {
-    element.addEventListener('click', async () => {
-        const jsonFile = element.dataset.json; // On récupère le nom du fichier sur l'étiquette HTML
+function updateBubbles(activeElement) {
+    const currentActive = document.querySelector('.timeline-bubble.active')
+    if (currentActive) {
+        currentActive.classList.remove('active');
+        currentActive.classList.add('text-secondary');
+    }
         
-        // On affiche le contenu
-        await renderTemplate(jsonFile, "experience-container", 'experience');
-        
-        // On met à jour les bulles
-        updateBubbles(element);
+    const newActive = activeElement.querySelector('.timeline-bubble');
+    if (newActive) {
+        newActive.classList.add('active');
+        newActive.classList.remove('text-secondary');
+    }
+}
+
+async function bindBubbleTimelineEvents() {
+    document.querySelectorAll('[id^="MPD-div-exp-"]').forEach(element => {
+        element.addEventListener('click', async () => {
+            const jsonFile = element.dataset.json;
+            if (jsonFile) {
+                await renderTemplate(jsonFile, "experience-container", 'experience');
+                updateBubbles(element);
+            }
+        });
     });
-});
+}
+
+async function renderBubbleTimeline() {
+    const container = document.getElementById("bubbleTimeline");
+    const bubblesTimeline = await fetchJson("./datas/bubbleTimeline.json");
+
+    if (!bubblesTimeline) return;
+    document.getElementById("bubbleTimeline").innerHTML = "";
+    const allBubblesHtml = bubblesTimeline.experiences
+        .map(experience => templates["bubble"](experience))
+        .join('');
+    container.innerHTML = allBubblesHtml;
+    bindBubbleTimelineEvents();
+}
+
+renderTemplate('./datas/formations.json', "formation-container", 'formation');
+await renderBubbleTimeline();
+
