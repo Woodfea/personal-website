@@ -2,7 +2,6 @@ import { experienceTemplate } from './templates/experienceTemplate.js';
 import { formationTemplate } from './templates/formationTemplate.js';
 import { bubbleTimelineTemplate } from './templates/bubbleTimelineTemplate.js';
 
-// On compile une seule fois au début
 const templates = {
     experience: Handlebars.compile(experienceTemplate),
     formation: Handlebars.compile(formationTemplate),
@@ -12,19 +11,23 @@ const templates = {
 async function fetchJson(file) {
     try {
         const response = await fetch(file);
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-        return await response.json();
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
     } catch (error) {
         console.error("Loading error " + file, error);
         return null;
     }
 }
 
-async function renderTemplate(jsonfile, containerHTMLId, templateType) {
+async function renderTemplate(jsonfile, containerId, templateType) {
     const data = await fetchJson(jsonfile);
-    if (!data) return;
+    if (!data) {
+        return;
+    }
     const html = templates[templateType](data);
-    document.getElementById(containerHTMLId).innerHTML = html;
+    document.getElementById(containerId).innerHTML = html;
 }
 
 function updateBubbles(activeElement) {
@@ -41,31 +44,31 @@ function updateBubbles(activeElement) {
     }
 }
 
-async function bindBubbleTimelineEvents() {
-    document.querySelectorAll('[id^="MPD-div-exp-"]').forEach(element => {
+async function bindBubbleTimelineEvents(containerID, bubbleID) {
+    document.querySelectorAll(`[id^="MPD-div-${bubbleID}"]`).forEach(element => {
         element.addEventListener('click', async () => {
-            const jsonFile = element.dataset.json;
-            if (jsonFile) {
-                await renderTemplate(jsonFile, "experience-container", 'experience');
-                updateBubbles(element);
+            const data = element.dataset.json;
+            if (!data) {
+                return;
             }
+            await renderTemplate(data, containerID, 'experience');
+            updateBubbles(element);
         });
     });
 }
 
-async function renderBubbleTimeline() {
-    const container = document.getElementById("bubbleTimeline");
-    const bubblesTimeline = await fetchJson("./datas/bubbleTimeline.json");
+async function renderBubbleTimelineExps() {
+    const bubblesTimeline = await fetchJson("./datas/bubbleTimelineExps.json");
+    await renderTemplate("./datas/bubbleTimelineExps.json", "bubbleTimelineExperience", "bubble");
+    bindBubbleTimelineEvents("experience-container", "exp");
+}
 
-    if (!bubblesTimeline) return;
-    document.getElementById("bubbleTimeline").innerHTML = "";
-    const allBubblesHtml = bubblesTimeline.experiences
-        .map(experience => templates["bubble"](experience))
-        .join('');
-    container.innerHTML = allBubblesHtml;
-    bindBubbleTimelineEvents();
+async function renderBubbleTimelineProject() {
+    const bubblesTimeline = await fetchJson("./datas/bubbleTimelineProject.json");
+    await renderTemplate("./datas/bubbleTimelineProject.json", "bubbleTimelineProject", "bubble");
+    bindBubbleTimelineEvents("project-container", "project");
 }
 
 renderTemplate('./datas/formations.json', "formation-container", 'formation');
-await renderBubbleTimeline();
-
+await renderBubbleTimelineExps();
+await renderBubbleTimelineProject();

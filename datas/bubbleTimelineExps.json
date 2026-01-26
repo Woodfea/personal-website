@@ -1,7 +1,7 @@
 {
     "experiences": [
         {
-            "id": "irit",
+            "id": "exp-irit",
             "jsonDataset": "./datas/irit.json",
             "number": 1,
             "year": "2023",
@@ -9,7 +9,7 @@
             "company": "IRIT"
         },
         {
-            "id": "dymasco",
+            "id": "exp-dymasco",
             "jsonDataset": "./datas/dymasco.json",
             "number": 2,
             "year": "2023 - 2025",

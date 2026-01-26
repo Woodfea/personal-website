@@ -1,0 +1,12 @@
+{
+    "experiences": [
+        {
+            "id": "project-MPW",
+            "jsonDataset": "./datas/my_personal_website.json",
+            "number": 1,
+            "year": "2026",
+            "contractType": "Projet perso",
+            "company": "Chez moi"
+        }
+    ] 
+}

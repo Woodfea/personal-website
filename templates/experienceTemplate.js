@@ -4,6 +4,14 @@ export const experienceTemplate =
         <div class="card-body p-4 p-md-5">
             <h5 class="card-title text-center mb-1 fw-bold">{{title}}</h5>
             <p class="text-center text-{{color}} fw-bold mb-4">{{company}} | {{period}}</p>
+            {{#if linkToGithub}}
+                <p class="text-center text-{{color}} fw-bold mb-4">
+                    <a class="nav-link" target="_blank" href="{{linkToGithub}}">
+                        <i class="bi bi-github"></i>
+                        Mon Github
+                    </a>
+                </p>
+            {{/if}}
             <div class="mx-auto" style="max-width: 800px;">
                 {{#each tasks}}
                     <p class="card-text mb-3 d-flex align-items-start">

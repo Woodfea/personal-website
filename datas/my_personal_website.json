@@ -1,0 +1,26 @@
+{
+  "id": "project-MPW",
+  "title": "Développeur full stack",
+  "company": "Chez moi",
+  "period": "Janvier 2026 - Ajourd'hui",
+  "linkToGithub": "https://github.com/Woodfea/personal-website",
+  "color": "success",
+  "tasks": [
+    "Petit site web",
+    "Configurer un VPS (Administrer les comptes utilisateurs, sécuriser, configurer NGINX, ...)",
+    "Mettre en place sur GitHub l'intégration continue (déploiement à chaque push sur la branche main)",
+    "Passer le site en HTTPS",
+    "Utiliser les principes SOLID et KISS pour le code"
+  ],
+  "badges": [
+    {"name": "JavaScript", "style": "success"},
+    {"name": "HTML", "style": "success"},
+    {"name": "CSS", "style": "success"},
+    {"name": "Bootstrap", "style": "dark"},
+    {"name": "Handlebar.js", "style": "dark"},
+    {"name": "Git", "style": "secondary"},
+    {"name": "Github", "style": "secondary"},
+    {"name": "Nginx", "style": "secondary"},
+    {"name": "Ubuntu", "style": "secondary"}
+  ]
+}
