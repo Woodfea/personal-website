@@ -4,10 +4,16 @@
   "company": "Astree Software",
   "period": "Février 2026 - Aujourd'hui",
   "color": "success",
-  "tasks": [],
+  "tasks": [
+    "Développement de fonctionnalités pour les systèmes MES/MOM.",
+    "Collaboration avec les équipes de développement pour assurer la qualité du code et le respect des délais."
+  ],
   "badges": [
     {"name": "Java", "style": "success"},
     {"name": "Spring Boot", "style": "success"},
-    {"name": "Angular", "style": "success"}
+    {"name": "Angular", "style": "success"},
+    {"name": "RxJS", "style": "dark"},
+    {"name": "Hibernate", "style": "dark"},
+    {"name": "GIT", "style": "secondary"}
 ]
 }
