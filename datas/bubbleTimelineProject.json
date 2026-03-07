@@ -4,7 +4,7 @@
             "id": "project-MPW",
             "jsonDataset": "./datas/my_personal_website.json",
             "number": 1,
-            "year": "2026",
+            "date": "Janvier 2026 - Aujourd'hui",
             "contractType": "Projet perso",
             "company": "Chez moi"
         }

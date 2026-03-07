@@ -4,7 +4,7 @@ export const bubbleTimelineTemplate =
         <div class="timeline-bubble d-flex align-items-center justify-content-center fw-bold text-secondary">
             {{number}}
         </div>
-        <div class="mt-2 fw-bold text-success">{{year}}</div>
+        <div class="mt-2 fw-bold text-success">{{date}}</div>
         <small class="text-muted">{{contractType}} - {{company}}</small>
     </div>
 {{/each}}`;

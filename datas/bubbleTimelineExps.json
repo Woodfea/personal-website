@@ -4,7 +4,7 @@
             "id": "exp-irit",
             "jsonDataset": "./datas/irit.json",
             "number": 1,
-            "year": "2023",
+            "date": "Mars 2023 - Août 2023",
             "contractType": "Stage",
             "company": "IRIT"
         },
@@ -12,7 +12,7 @@
             "id": "exp-dymasco",
             "jsonDataset": "./datas/dymasco.json",
             "number": 2,
-            "year": "2023 - 2025",
+            "date": "Octobre 2023 - Août 2025",
             "contractType": "CDI",
             "company": "Dymasco"
         },
@@ -20,7 +20,7 @@
             "id": "exp-astree_software",
             "jsonDataset": "./datas/astree_software.json",
             "number": 3,
-            "year": "2026 - Aujourd'hui",
+            "date": "Mars 2026 - Aujourd'hui",
             "contractType": "CDI",
             "company": "Astree Software"
         }
