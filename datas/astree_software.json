@@ -1,0 +1,13 @@
+{
+  "id": "exp-astree_software",
+  "title": "Développeur Logiciel MES/MOM",
+  "company": "Astree Software",
+  "period": "Février 2026 - Aujourd'hui",
+  "color": "success",
+  "tasks": [],
+  "badges": [
+    {"name": "Java", "style": "success"},
+    {"name": "Spring Boot", "style": "success"},
+    {"name": "Angular", "style": "success"}
+]
+}

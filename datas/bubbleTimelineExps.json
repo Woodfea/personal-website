@@ -15,6 +15,14 @@
             "year": "2023 - 2025",
             "contractType": "CDI",
             "company": "Dymasco"
+        },
+         {
+            "id": "exp-astree_software",
+            "jsonDataset": "./datas/astree_software.json",
+            "number": 3,
+            "year": "2026 - Aujourd'hui",
+            "contractType": "CDI",
+            "company": "Astree Software"
         }
     ] 
 }
