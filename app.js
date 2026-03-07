@@ -30,8 +30,8 @@ async function renderTemplate(jsonfile, containerId, templateType) {
     document.getElementById(containerId).innerHTML = html;
 }
 
-function updateBubbles(activeElement) {
-    const currentActive = document.querySelector('.timeline-bubble.active')
+function updateBubbles(activeElement, bubbleID) {
+    const currentActive = document.querySelector(`[id^="MPD-div-${bubbleID}"] .timeline-bubble.active`);
     if (currentActive) {
         currentActive.classList.remove('active');
         currentActive.classList.add('text-secondary');
@@ -52,7 +52,7 @@ async function bindBubbleTimelineEvents(containerID, bubbleID) {
                 return;
             }
             await renderTemplate(data, containerID, 'experience');
-            updateBubbles(element);
+            updateBubbles(element, bubbleID);
         });
     });
 }
